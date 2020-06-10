@@ -26,9 +26,9 @@ function DrumPad(props) {
   }, [props.audio]);
 
   const playSound = () => {
-    props.audio.play();
-    const id = props.audio.id;
-    const parent = props.audio.parentNode;
+    audio.current.play();
+    const id = audio.current.id;
+    const parent = audio.current.parentNode;
     parent.classList.add('active');
     const display = parent.parentNode;
     display.querySelector('h1').innerText = `${id} is playing`;
